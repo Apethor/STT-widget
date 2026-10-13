@@ -2,7 +2,7 @@
   Icon = "internal/branding/ai-talker.png"
   Name = "STT-widget"
   ID = "dev.ai-talker"
-  Version = "0.5.1"
+  Version = "0.12.0"
   Build = 8
 
 [Migrations]

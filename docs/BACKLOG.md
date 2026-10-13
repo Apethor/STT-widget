@@ -447,12 +447,52 @@ por efeitos livres, inclusive síntese original, sem exclusividade do projeto.
 Foram gerados **Impulso** e **Brilho**, dedicados ao domínio público via CC0.
 Os áudios Nintendo foram removidos dos fontes antes do primeiro commit.
 O catálogo migra para versão 3, preservando IDs, nomes pessoais, volume,
-posição e cópias já instaladas. Foram adicionados testes para catálogos 1/2;
-execução Go e conferência nativa aguardam a toolchain e a entrega futura.
+posição e cópias já instaladas. Os testes de migração dos catálogos 1/2
+passaram também com detector de corridas na validação de BL-102.
+A conferência nativa integral e o aceite funcional continuam para a entrega futura.
 A revisão inicial por padrões não é uma auditoria completa;
 se o histórico antigo vier a ser importado, precisará de análise própria.
 Não há autorização para implementar BL-081 a BL-100, recompilar ou gerar
 uma release nesta etapa. BL-098 continua abandonado.
+
+## Retomada do desenvolvimento
+
+| Item | Pedido |
+| --- | --- |
+| BL-102 | Preparar o ambiente local e validar a base atual antes de escolher funcionalidades. |
+
+### BL-102 — Preparar e validar a base nesta máquina
+
+Registro: **13 de outubro de 2026**. Estado: **ambiente preparado e validação
+automatizada concluída; aceite funcional pendente**.
+
+Depois da publicação dos fontes, o usuário autorizou prosseguir com o
+desenvolvimento e escolheu preparar/validar a base, incluindo renomeação e
+migração dos efeitos. Pediu também remover do README a frase
+“Anteriormente chamado AI Talker.”, que foi retirada.
+
+Usar as versões e os hashes fixados em `scripts/toolchain.json`. Ferramentas,
+caches de módulos/compilação e intermediários ficam em `artifacts`, ignorada
+pelo Git. Dados dos testes permanecem sintéticos e isolados; esta etapa não
+inclui chamadas a serviços reais ou alterações na instalação global.
+Executar os testes necessários, corrigindo falhas da base que aparecerem.
+Não iniciar BL-081 a BL-100 sem o lote escolhido; BL-098 segue abandonado.
+A validação automatizada não substitui o aceite funcional do usuário ou a
+conferência nativa de uma entrega futura.
+
+**Resultado:** toolchain fixada preparada localmente, hashes conferidos e
+caches/intermediários isolados em `artifacts`. O runner foi corrigido para
+selecionar um único Go quando o local e o global coexistem. A frase pedida
+foi removida do README, e o metadado Fyne foi alinhado à base 0.12.0.
+
+`test-go.ps1 -Integration` passou: formatação, `go vet`, módulos, detector
+de corridas, 448 testes desktop em 23 lotes em cada modalidade e integrações
+locais. Compilação CLI/GUI local passou; versão e ajuda do CLI passaram.
+`smoke-desktop.ps1 -IntegratedFrame -Screenshot` conferiu abertura, título,
+ícones, moldura, controles nativos, instância única e encerramento com dados
+sintéticos. Sobre foi coberto por teste automatizado; a inspeção visual
+dessa página no executável da entrega segue pendente. Não houve release
+ou serviços AWS reais. Evidências locais e limites estão no [HANDOFF](../HANDOFF.md).
 
 ## Direções ainda sem escopo
 

@@ -1,6 +1,13 @@
 # Dot-source this file to use the portable toolchain in the current shell.
 $aiRepository = Split-Path -Parent $PSScriptRoot
 $aiTools = Join-Path $aiRepository 'artifacts\tools'
+$aiCache = Join-Path $aiRepository 'artifacts\cache'
+$env:GOCACHE = Join-Path $aiCache 'go-build'
+$env:GOMODCACHE = Join-Path $aiCache 'go-modules'
+$env:GOTMPDIR = Join-Path $aiRepository 'artifacts\tmp\go-build'
+foreach ($aiLocalDirectory in @($env:GOCACHE, $env:GOMODCACHE, $env:GOTMPDIR)) {
+    [System.IO.Directory]::CreateDirectory($aiLocalDirectory) | Out-Null
+}
 $aiGoBin = Join-Path $aiTools 'go\bin'
 $aiGCCBin = Join-Path $aiTools 'mingw64\bin'
 if (Test-Path -LiteralPath (Join-Path $aiGoBin 'go.exe')) {

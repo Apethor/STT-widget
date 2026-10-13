@@ -78,12 +78,15 @@ dos assets necessários. Os novos WAVs foram decodificados com os codecs
 compartilhados já disponíveis e reproduzidos numa geração independente
 com hashes idênticos. Nenhum áudio foi reproduzido em dispositivo físico.
 
-Os testes de migração foram adicionados, mas os testes Go ainda não foram
-executados: a máquina tem Go compartilhado 1.26.2 e não tem GCC no PATH;
-o projeto exige a toolchain fixada no README. Essas conferências não são
-aceite funcional nem validação do aplicativo nativo.
+Na retomada **BL-102**, a toolchain fixada foi preparada em `artifacts/tools`.
+Os testes de migração e a suíte `test-go.ps1 -Integration` passaram, incluindo
+detector de corridas e os 448 testes da interface. A compilação local e a
+conferência nativa de abertura/ícones/moldura/instância única/encerramento
+também passaram com dados sintéticos. Detalhes e limites estão no
+[HANDOFF](../HANDOFF.md); o aceite funcional e a validação nativa integral
+de uma nova entrega continuam pendentes.
 
 O pedido está em **BL-101** de [BACKLOG.md](BACKLOG.md). O escopo inclui
-nome, licença, proteção dos fontes e substituição dos dois efeitos. Não
-inclui instalação da toolchain, build do aplicativo, pacotes ou implementação
-do backlog de funcionalidades anterior.
+nome, licença, proteção dos fontes e substituição dos dois efeitos. O preparo,
+build local e validação posteriores foram autorizados em BL-102. Pacotes e
+implementação do backlog de funcionalidades anterior não fizeram parte dessas etapas.

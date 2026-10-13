@@ -184,7 +184,8 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Não foi possível listar os testes desktop.' }
     $aiDesktopTests = @($aiDesktopTests | Where-Object { $_ -match '^Test\S+$' })
     if (-not $aiDesktopTests.Count) { throw 'Nenhum teste desktop foi encontrado.' }
-    $aiGoExecutable = (Get-Command go -CommandType Application).Source
+    $aiGoExecutable = (Get-Command go -CommandType Application -ErrorAction Stop |
+        Select-Object -First 1).Source
     $aiRaceLogs = Join-Path (Get-Location).Path ('artifacts\validation\go-race-' + [guid]::NewGuid().ToString('N'))
     New-Item -ItemType Directory -Path $aiRaceLogs -Force | Out-Null
     $aiDesktopTests | Set-Content -LiteralPath (Join-Path $aiRaceLogs 'tests.txt') -Encoding UTF8

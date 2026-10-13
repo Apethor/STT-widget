@@ -1,7 +1,5 @@
 # STT-widget
 
-Anteriormente chamado AI Talker.
-
 Aplicativo desktop para Windows, escrito em **Go e Fyne**, que grava áudio
 e transcreve pela AWS Cloud, pelo Whisper local ou por APIs com chave própria.
 Inclui transcrição Stream, processamento manual de texto, abas e grupos,
@@ -14,12 +12,14 @@ e assets de terceiros conservam seus próprios termos, registrados em
 
 ## Estado desta cópia
 
-Esta pasta contém **fontes, testes, assets e documentação de manutenção**.
-Executáveis, pacotes, ferramentas locais, dados do aplicativo e artefatos
-antigos foram removidos. O legado Python não faz parte da geração atual.
+O repo versiona **fontes, testes, assets e documentação de manutenção**.
+Ferramentas, caches, dados e saídas de desenvolvimento ficam em pastas locais
+ignoradas pelo Git. Artefatos antigos foram removidos na transferência.
+O legado Python não faz parte da geração atual.
 Esta transferência veio sem a pasta `.git`. O usuário escolheu começar um
 histórico novo na branch `main`, a partir desta árvore de fontes Go.
-Não há uma versão instalada nesta cópia.
+O ambiente local foi preparado e a base foi validada; os executáveis de
+desenvolvimento ficam em `bin`. Nenhum pacote de release novo foi publicado.
 
 A preparação do novo nome e do repositório público está registrada em
 [REPOSITORIO-PUBLICO.md](docs/REPOSITORIO-PUBLICO.md).
@@ -48,6 +48,9 @@ rastreável deve partir de fontes comitados e de uma árvore limpa.
 O preparo baixa as versões e os SHA256 fixados em `scripts\toolchain.json`.
 Instala Go, GCC e FFmpeg **somente em `artifacts\tools`** e recria
 `artifacts\go.mod`, que exclui os fontes dessas ferramentas da suíte do app.
+O ambiente Go usa `artifacts\cache` para caches de módulos/compilação e
+`artifacts\tmp\go-build` para intermediários. Essas pastas são ignoradas
+pelo Git; os scripts não mudam a instalação global das ferramentas.
 O módulo e suas dependências permanecem fixados em `go.mod` e `go.sum`.
 
 O build produz `bin\STT-widget.exe`, `bin\stt-widget-cli.exe`, codecs, instruções

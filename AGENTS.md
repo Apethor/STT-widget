@@ -2,8 +2,9 @@
 
 Leia [HANDOFF.md](HANDOFF.md) ao retomar o trabalho e
 [README.md](README.md) para preparar ou gerar uma versão.
-Esta cópia foi reduzida aos fontes Go, testes/assets e documentação atual.
-Não há instalação, ferramentas locais nem artefatos preservados.
+Esta árvore versionada conserva fontes Go, testes/assets e documentação atual.
+Ferramentas, caches, dados e artefatos de desenvolvimento são locais e ignorados
+pelo Git. O estado do preparo desta máquina está no handoff.
 Não reinstale, compile ou publique apenas por encontrar instruções de build.
 
 ## Escopo de trabalho
@@ -11,7 +12,7 @@ Não reinstale, compile ou publique apenas por encontrar instruções de build.
 Novas sugestões devem ser registradas em [docs/BACKLOG.md](docs/BACKLOG.md).
 O usuário escolhe o lote e autoriza pesquisa, implementação e entrega.
 Registrar um pedido não autoriza iniciar essas atividades.
-O backlog atual tem BL-081 a BL-101; BL-098 foi abandonado e não deve ser
+O backlog atual tem BL-081 a BL-102; BL-098 foi abandonado e não deve ser
 pesquisado nem implementado. Não reutilize os IDs anteriores.
 
 A limpeza dos fontes/documentos não autoriza implementar esse backlog.

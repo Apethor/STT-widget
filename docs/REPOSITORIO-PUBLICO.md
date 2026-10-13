@@ -3,16 +3,20 @@
 Registro: **13 de outubro de 2026**. Nome escolhido: **STT-widget**,
 anteriormente AI Talker.
 
+Repositório público: [Apethor/STT-widget](https://github.com/Apethor/STT-widget).
+Foram publicados somente fontes, testes, assets e documentação.
+
 ## Git local
 
 A transferência trouxe os fontes sem `.git`. O usuário escolheu começar
-um histórico novo. O repositório foi inicializado em `main`, ainda sem
-commits e sem remoto. A sessão GitHub CLI já estava autenticada.
+um histórico novo. A branch `main` acompanha `origin/main`; o primeiro
+commit de fontes é `7bc334c`. A sessão GitHub CLI já estava autenticada.
 
 A autoria foi configurada localmente com o alias público e o e-mail
 `noreply` da conta autenticada, sem alterar a configuração global de outros
-projetos. A sessão atual é `Apethor`; a consulta a `Apethor/STT-widget`
-retornou HTTP 404, sem repo existente visível a essa sessão.
+projetos. O remoto usa HTTPS e o helper do GitHub CLI configurado somente
+neste repo, sem armazenar tokens nos fontes ou no arquivo de configuração
+do Git. A visibilidade pública e o commit remoto foram conferidos pela API.
 
 ## Identidade do produto
 
@@ -40,16 +44,18 @@ chaves privadas não encontrou credenciais reais. Os valores de credenciais,
 identidades AWS e URLs com senha encontrados nos testes são sintéticos.
 Os READMEs das fixtures documentam a geração de fala sintética.
 Esta triagem não garante a ausência de todo segredo ou dado pessoal;
-a revisão deve considerar o conjunto exato do primeiro commit.
+a revisão considerou também os 538 arquivos do primeiro commit, após as
+alterações desta etapa. O índice não continha dados locais, ferramentas,
+pacotes, áudios Nintendo ou padrões comuns de credenciais reais.
 
 O `.gitignore` protege dados locais, exportações, artefatos, backups e
 arquivos de credenciais. Assets em `internal` e fixtures em `tests` continuam
 incluídos. Ao usar `AI_TALKER_DATA_DIR`, prefira um diretório fora do repo
 ou uma pasta já ignorada, como `dados/` ou `artifacts/`.
 
-## Decisões antes da publicação
+## Decisões aplicadas na publicação
 
-- Confirmar a conta/organização GitHub de destino para `STT-widget`.
+- Destino: `Apethor/STT-widget`, público, na conta já autenticada.
 - A licença **MIT** foi escolhida para o código original e adicionada em
   [LICENSE](../LICENSE), usando o alias público como titular. Os scripts
   incluem esse aviso nos pacotes futuros. Conservar as licenças e os avisos
@@ -60,8 +66,9 @@ ou uma pasta já ignorada, como `dados/` ou `artifacts/`.
   antes do primeiro commit. O catálogo migra de versões 1/2 para 3, mantendo
   IDs, nomes pessoais, volume, posição e cópias instaladas. Procedência e
   hashes estão em [SOURCES.md](../internal/soundboard/assets/SOURCES.md).
-- Revisar os arquivos e a identidade de autoria do primeiro commit; depois,
-  configurar o remoto e publicar o conjunto revisado.
+- O conjunto do primeiro commit e a identidade efetiva de autor/committer
+  foram revisados antes da publicação. Os áudios substituídos nunca foram
+  comitados neste histórico novo.
 
 ## Verificação desta etapa
 

@@ -421,8 +421,8 @@ estratégia e estimativa com evidências. Não foi criado pipeline ou recurso.
 
 ### BL-101 — Novo nome e Git/GitHub público
 
-Registro: **13 de outubro de 2026**. Estado: **preparação local autorizada;
-nome escolhido; publicação pendente**.
+Registro: **13 de outubro de 2026**. Estado: **preparação e publicação dos
+fontes concluídas; validação funcional pendente**.
 
 Ao retomar o projeto em outra máquina, o usuário pediu primeiro escolher um
 novo nome e configurar Git/GitHub, com intenção de manter o repo público e
@@ -434,8 +434,9 @@ entradas em `cmd` e ícones originais foram preservados.
 
 Esta transferência não trouxe `.git`. O usuário escolheu **começar um
 histórico novo**. Foi inicializado Git local em `main`, com alias público
-e e-mail `noreply` da conta autenticada configurados somente neste repo,
-sem commit ou remoto.
+e e-mail `noreply` da conta autenticada configurados somente neste repo.
+O repositório público é [Apethor/STT-widget](https://github.com/Apethor/STT-widget),
+com `origin/main` e primeiro commit de fontes `7bc334c`.
 O `.gitignore` foi reforçado para dados locais, backups e chaves privadas,
 preservando assets incorporados e fixtures sintéticas. A triagem inicial e
 as decisões para publicação estão em [REPOSITORIO-PUBLICO.md](REPOSITORIO-PUBLICO.md).

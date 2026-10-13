@@ -7,11 +7,12 @@ Workspace: raiz desta cópia do projeto, Windows e PowerShell.
 
 O projeto foi transferido para outra máquina somente com a árvore de fontes,
 sem a pasta `.git`. O usuário escolheu iniciar um **histórico novo**. O Git
-local foi inicializado na branch `main`, sem commits ou remoto; o e-mail de
-autoria usa o `noreply` da conta GitHub autenticada, configurado só neste repo.
-O nome de autoria usa o alias público da mesma conta.
+local usa a branch `main`, acompanhando `origin/main` no repositório público
+[Apethor/STT-widget](https://github.com/Apethor/STT-widget).
+O primeiro commit de fontes é `7bc334c`. A autoria usa o alias público e o
+e-mail `noreply` da conta GitHub, configurados só neste repo.
 
-A etapa atual é preparar o repositório público com o nome **STT-widget**,
+A preparação do repositório público foi concluída com o nome **STT-widget**,
 escolhido pelo usuário. O nome foi aplicado à documentação, à identidade
 visível, às traduções e aos scripts/launchers. Os próximos builds terão
 `STT-widget.exe` para a interface e `stt-widget-cli.exe` para o terminal.
@@ -23,14 +24,14 @@ com o alias público como titular. Os dois áudios Nintendo foram substituídos
 por **Impulso** e **Brilho**, efeitos originais sintetizados localmente e
 dedicados ao domínio público via CC0, conforme a preferência do usuário.
 O catálogo migra para versão 3, conservando IDs, nomes personalizados,
-volume, posição e cópias já instaladas. Os áudios Nintendo não entrarão no
-primeiro commit.
+volume, posição e cópias já instaladas. Os áudios Nintendo não fazem parte
+do histórico novo.
 Consulte [REPOSITORIO-PUBLICO.md](docs/REPOSITORIO-PUBLICO.md) e **BL-101**
-no [backlog](docs/BACKLOG.md). Nenhum repositório remoto foi criado e
-nenhum arquivo foi publicado.
+no [backlog](docs/BACKLOG.md). Foram publicados somente fontes, testes,
+assets e documentação; não há executável ou pacote de release novo.
 
 Nesta etapa, foram conferidos gofmt, sintaxe PowerShell, traduções,
-regras de ignore, decodificação e reprodução dos hashes da síntese.
+regras de ignore, decodificação e reprodutibilidade dos hashes da síntese.
 Foram acrescentados testes de migração dos catálogos 1/2; os testes Go
 ainda não foram executados. A máquina tem Go compartilhado 1.26.2 e não
 tem GCC no PATH; o projeto exige a toolchain fixada no README. Nenhuma

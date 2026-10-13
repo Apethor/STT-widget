@@ -1,0 +1,23 @@
+{
+  "go": {
+    "version": "1.27.2",
+    "url": "https://go.dev/dl/go1.27.2.windows-amd64.zip",
+    "archive": "go1.27.2.zip",
+    "sha256": "1314008898bd40df77af4b014f777f08873dbdfbcd3d92308728ee03304fe04f",
+    "folder": "go"
+  },
+  "gcc": {
+    "version": "16.2.0",
+    "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/16.2.0posix-14.0.0-ucrt-r2/winlibs-x86_64-posix-seh-gcc-16.2.0-mingw-w64ucrt-14.0.0-r2.zip",
+    "archive": "winlibs-gcc16.2.zip",
+    "sha256": "d5dbafc4a170e762ca6143151ec918fb9e2c72736fb14cd704abebc6bdd5276a",
+    "folder": "mingw64"
+  },
+  "ffmpeg": {
+    "version": "9.0.2",
+    "url": "https://github.com/GyanD/codexffmpeg/releases/download/9.0.2/ffmpeg-9.0.2-essentials_build.zip",
+    "archive": "ffmpeg9.0.2.zip",
+    "sha256": "60f467265b1e312373dbcd92200c2618a74850f98d3d078e94296bb3fa2047ba",
+    "folder": "ffmpeg/ffmpeg-9.0.2-essentials_build"
+  }
+}

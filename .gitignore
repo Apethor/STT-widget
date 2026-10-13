@@ -1,0 +1,59 @@
+.ai-talker/
+transcricoes/
+/gravacoes/
+/screenshots/
+artifacts/
+*.log
+
+# Dados locais e backups; não incluem assets e fixtures do código.
+/dados/
+/data/
+/cache/
+/recordings/
+/sessions/
+/history/
+/backups/
+/settings.json
+/settings-python.json
+
+# Credenciais e chaves privadas, inclusive cópias locais para diagnóstico.
+.aws/
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+id_rsa
+id_ed25519
+
+# Arquivos locais de áudio, transcrições e cópias do código.
+# Os WAVs sintéticos de tests/fixtures continuam versionados.
+/*.m4a
+/*.wav
+/*.mp3
+/*.ogg
+/*.opus
+/*.flac
+/*.aac
+/*.webm
+/*.mp4
+/*.zip
+/transcricao.txt
+/transcricao.aws.json
+
+# Configuração local e arquivos temporários.
+.env
+.env.*
+!.env.example
+*.tmp
+*.bak
+.gitconfig.local
+
+# Compilações e pacotes da versão Go.
+/bin/
+/dist/
+*.exe
+*.test
+*.syso
+/coverage.out

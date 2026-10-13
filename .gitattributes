@@ -1,0 +1,26 @@
+* text=auto eol=lf
+
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.lock text eol=lf
+*.json text eol=lf
+*.code-workspace text eol=lf
+
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.vbs text eol=crlf
+
+*.wav binary
+*.pcm binary
+*.m4a binary
+*.mp3 binary
+*.ogg binary
+*.opus binary
+*.flac binary
+*.aac binary
+*.webm binary
+*.mp4 binary
+*.png binary
+*.ico binary
+*.zip binary

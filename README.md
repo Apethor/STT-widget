@@ -6,6 +6,12 @@ Inclui transcrição Stream, processamento manual de texto, abas e grupos,
 screenshots, vídeo, reprodução de áudio, Conversa ao vivo e Painel de sons.
 A interface e o CLI compartilham o núcleo de transcrição.
 
+O projeto web/SaaS **STT Hub** está sendo organizado separadamente em
+[Apethor/stt-hub](https://github.com/Apethor/stt-hub) (público), voltado
+inicialmente a profissionais individuais. Este desktop pode continuar em
+paralelo; o pivot não o encerra. O estado da transição está no
+[HANDOFF](HANDOFF.md#stt-hub--organização-separada-bl-103).
+
 O código original é distribuído sob a [licença MIT](LICENSE). Dependências
 e assets de terceiros conservam seus próprios termos, registrados em
 [THIRD-PARTY.md](docs/THIRD-PARTY.md) e nas [origens dos sons](internal/soundboard/assets/SOURCES.md).

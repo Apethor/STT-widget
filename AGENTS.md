@@ -12,7 +12,7 @@ Não reinstale, compile ou publique apenas por encontrar instruções de build.
 Novas sugestões devem ser registradas em [docs/BACKLOG.md](docs/BACKLOG.md).
 O usuário escolhe o lote e autoriza pesquisa, implementação e entrega.
 Registrar um pedido não autoriza iniciar essas atividades.
-O backlog atual tem BL-081 a BL-102; BL-098 foi abandonado e não deve ser
+O backlog atual tem BL-081 a BL-103; BL-098 foi abandonado e não deve ser
 pesquisado nem implementado. Não reutilize os IDs anteriores.
 
 A limpeza dos fontes/documentos não autoriza implementar esse backlog.

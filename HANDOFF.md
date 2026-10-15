@@ -1,6 +1,6 @@
 # Handoff — STT-widget
 
-Atualizado em **13 de outubro de 2026**.
+Atualizado em **15 de outubro de 2026**.
 Workspace: raiz desta cópia do projeto, Windows e PowerShell.
 
 ## Estado atual
@@ -29,6 +29,36 @@ do histórico novo.
 Consulte [REPOSITORIO-PUBLICO.md](docs/REPOSITORIO-PUBLICO.md) e **BL-101**
 no [backlog](docs/BACKLOG.md). Foram publicados somente fontes, testes,
 assets e documentação; não há executável ou pacote de release novo.
+
+## STT Hub — organização separada (BL-103)
+
+O usuário autorizou preparar o pivot web/SaaS em um projeto independente,
+com o nome **STT Hub** desde o início. Público inicial: profissionais
+individuais que querem transcrever áudio e trabalhar textos. O STT-widget
+pode ser retomado e desenvolvido em paralelo; não foi encerrado ou removido.
+
+A nova pasta irmã é **STT-Hub**, com Git próprio em `main` e repositório
+público [Apethor/stt-hub](https://github.com/Apethor/stt-hub), conforme pedido
+explícito mais recente do usuário.
+Para continuar lá, ler o README, o AGENTS.md e o HANDOFF.md dessa pasta.
+Eles registram decisões, propostas, origem, contratos e mapa de módulos/testes.
+As referências à origem usam links do GitHub, sem depender desta pasta
+local, e o novo README inclui instruções para clonar em outra máquina.
+A referência de fontes deste desktop é o commit
+`361788018f841637d09c3931f64e8b2819d16347`.
+
+Foram preparados documentos e uma referência de prompt com o aviso MIT da
+origem. Não foram copiados fontes Go, ferramentas, assets ou dados pessoais.
+O STT Hub ainda não tem aplicação, stack, providers ou hospedagem definidos.
+A próxima etapa é fechar o recorte e escolher a arquitetura antes do scaffold.
+Identificadores legados deste desktop não devem ser levados ao projeto novo.
+
+Esta organização não altera o estado funcional do desktop nem autoriza
+implementar seu backlog pendente. Os detalhes estão em **BL-103**.
+
+O clone anônimo do STT Hub passou, com os 12 arquivos e 28 links internos
+conferidos sem depender da pasta de origem. Evidência local ignorada pelo
+Git: `artifacts/validation/stt-hub-portability-a1bbc37ca083410fb6b18aef93af401e.json`.
 
 ## Retomada local — BL-102
 

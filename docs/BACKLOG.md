@@ -1,6 +1,6 @@
 # Backlog — STT-widget
 
-Iniciado em **7 de outubro de 2026**. Revisado em **13 de outubro de 2026**.
+Iniciado em **7 de outubro de 2026**. Revisado em **15 de outubro de 2026**.
 
 ## Próxima versão — sugestões registradas em 13 de outubro
 
@@ -493,6 +493,57 @@ locais. Compilação CLI/GUI local passou; versão e ajuda do CLI passaram.
 sintéticos. Sobre foi coberto por teste automatizado; a inspeção visual
 dessa página no executável da entrega segue pendente. Não houve release
 ou serviços AWS reais. Evidências locais e limites estão no [HANDOFF](../HANDOFF.md).
+
+## Direção web/SaaS
+
+| Item | Pedido |
+| --- | --- |
+| BL-103 | Organizar o STT Hub em pasta/repositório independentes, preservando a origem e a possibilidade de continuar o desktop. |
+
+### BL-103 — STT Hub: pivot para web/SaaS
+
+Registro: **15 de outubro de 2026**. Estado: **organização inicial concluída;
+recorte final, stack e implementação da aplicação pendentes**.
+
+O usuário quer transformar a experiência em um produto web/SaaS, escolhendo
+as funcionalidades que permanecem e as que ficam de fora. Confirmou como
+público inicial **profissionais individuais, para transcrever e trabalhar
+textos**. Autorizou a preparação em pasta paralela, repositório próprio,
+primeiros commits, GitHub e continuidade em outra sessão. Na mesma preparação,
+definiu explicitamente GitHub **público** e retomada em outra máquina, com
+referências ao código de origem por URLs do GitHub, sem arquivos locais.
+Quer preservar as decisões e os comportamentos úteis desta base.
+Escolheu **STT Hub** como nome do SaaS, sem levar os identificadores legados
+do desktop. Esclareceu que o STT-widget pode ser retomado, inclusive em
+paralelo; a transição não encerra este projeto.
+
+A referência atual é [Apethor/STT-widget](https://github.com/Apethor/STT-widget),
+commit `361788018f841637d09c3931f64e8b2819d16347`.
+Há núcleo compartilhado entre CLI e desktop em `internal/transcript`, regras
+e prompts em `internal/processing` e documentação funcional em `docs`.
+O núcleo ainda usa configurações, armazenamento e recursos locais;
+reaproveitá-lo exige avaliar essas dependências para o serviço multiusuário.
+
+Proposta inicial para discussão: gravar pelo microfone ou enviar áudio,
+transcrever, revisar, processar por ação explícita, copiar/exportar e
+consultar histórico. Captura do sistema, screenshots/vídeo, Painel de sons,
+Conversa ao vivo e execução local do Whisper são candidatos a ficar fora
+da primeira versão; esses cortes ainda não foram aprovados pelo usuário.
+
+**Resultado da organização:** pasta irmã **STT-Hub**, com Git próprio em
+`main` e repositório público [Apethor/stt-hub](https://github.com/Apethor/stt-hub).
+A base nova tem README, AGENTS, handoff, escopo, decisões, contratos,
+backlog próprio e mapa de origem com links para a revisão de referência.
+Uma referência de prompt foi adaptada, com aviso MIT preservado.
+Não foram importados fontes Go, ferramentas, assets nem dados de usuário.
+Clone anônimo conferiu os 12 arquivos e 28 links internos, com árvore limpa;
+a API pública confirmou a visibilidade e a branch padrão `main`.
+
+O novo projeto não depende de um caminho local desta máquina. Go no backend
+continua como possibilidade; recorte final, stack, providers, hospedagem,
+limites de uso, cobrança e licença do código futuro seguem em aberto.
+Ainda não há scaffold da aplicação nem implantação. O backlog desktop não
+integra automaticamente o escopo do SaaS; BL-098 permanece abandonado.
 
 ## Direções ainda sem escopo
 

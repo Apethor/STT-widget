@@ -49,8 +49,9 @@ A referência de fontes deste desktop é o commit
 
 Foram preparados documentos e uma referência de prompt com o aviso MIT da
 origem. Não foram copiados fontes Go, ferramentas, assets ou dados pessoais.
-O STT Hub ainda não tem aplicação, stack, providers ou hospedagem definidos.
-A próxima etapa é fechar o recorte e escolher a arquitetura antes do scaffold.
+O STT Hub ainda não tem aplicação ou hospedagem. A rodada seguinte, **BL-104**,
+definiu Angular/Orquestra e Bedrock/Amazon Transcribe; backend e persistência
+seguem em planejamento antes do scaffold.
 Identificadores legados deste desktop não devem ser levados ao projeto novo.
 
 Esta organização não altera o estado funcional do desktop nem autoriza
@@ -59,6 +60,31 @@ implementar seu backlog pendente. Os detalhes estão em **BL-103**.
 O clone anônimo do STT Hub passou, com os 12 arquivos e 28 links internos
 conferidos sem depender da pasta de origem. Evidência local ignorada pelo
 Git: `artifacts/validation/stt-hub-portability-a1bbc37ca083410fb6b18aef93af401e.json`.
+
+## STT Hub — decisões de produto (BL-104)
+
+O usuário continuou nesta sessão para fechar decisões e publicá-las no
+novo repo antes da implementação. Confirmou microfone pelo navegador,
+Bedrock e Amazon Transcribe para comparar, processamento de texto,
+screenshots, abas/grupos, Juntar/Mesclar, Teams/instruções e opções visuais.
+O frontend será Angular com o padrão Orquestra; as skills e componentes
+serão obtidos no ambiente de implementação.
+
+No SaaS ficam fora Equipe, áudio do sistema, vídeo, botoneira e conectores
+de IA por API genérica/OpenAI/OpenRouter/Azure. A botoneira foi retirada na
+correção final desta rodada. Essas escolhas não removem recursos do desktop
+nem abandonam seu backlog Azure ou outras funcionalidades.
+
+BL-099 foi selecionado para o SaaS: bypass opcional do pré-processamento,
+ainda não implementado na origem. S3 é preferência para arquivos. Whisper
+no navegador e login Entra ID são investigações, sem decisão de inclusão
+ou autenticação final. Banco/metadados, backend e hospedagem seguem abertos.
+Os dados de cada pessoa, inclusive abas e grupos, precisam de isolamento.
+
+O STT Hub recebeu decisões, escopo, contratos, mapa de origem e um documento
+de investigações com fontes primárias. Houve pesquisa documental inicial;
+não houve inferência/teste de hardware, login real, recursos AWS ou código
+de aplicação nesta rodada. A continuidade está no handoff do repo novo.
 
 ## Retomada local — BL-102
 

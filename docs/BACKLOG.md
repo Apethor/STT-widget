@@ -540,10 +540,56 @@ Clone anônimo conferiu os 12 arquivos e 28 links internos, com árvore limpa;
 a API pública confirmou a visibilidade e a branch padrão `main`.
 
 O novo projeto não depende de um caminho local desta máquina. Go no backend
-continua como possibilidade; recorte final, stack, providers, hospedagem,
-limites de uso, cobrança e licença do código futuro seguem em aberto.
+continua como possibilidade. As decisões de produto/frontend/providers
+seguintes estão em **BL-104**; backend, hospedagem, limites de uso, cobrança
+e licença do código futuro seguem em aberto.
 Ainda não há scaffold da aplicação nem implantação. O backlog desktop não
 integra automaticamente o escopo do SaaS; BL-098 permanece abandonado.
+
+## Decisões de produto do STT Hub
+
+| Item | Pedido |
+| --- | --- |
+| BL-104 | Consolidar o recorte, frontend, direção AWS e investigações do STT Hub no GitHub antes da implementação. |
+
+### BL-104 — Recorte e decisões do STT Hub
+
+Registro: **15 de outubro de 2026**. Estado: **decisões documentadas;
+investigações práticas e implementação pendentes**.
+
+O usuário pediu continuar a discussão nesta sessão e registrar no repo
+novo somente contexto útil para o produto. Definiu Angular com o padrão
+Orquestra, cujas skills/componentes serão obtidos no ambiente de destino.
+
+Manter microfone da própria pessoa pelo navegador, screenshots, processamento,
+abas/grupos, Juntar/Mesclar, modo Teams de redação, instruções e configurações
+visuais. Confirmou **Bedrock e Amazon Transcribe**, como serviços distintos,
+com opções para comparação. Voxtral e o catálogo AWS atual da origem são
+referências, sem dispensar validação de disponibilidade no ambiente futuro.
+
+Excluir do SaaS nesta versão Equipe, áudio do sistema, vídeo, botoneira e
+conexões de IA por API genérica/OpenAI/OpenRouter/Azure. A botoneira foi
+retirada na correção final, substituindo a indicação inicial de mantê-la.
+Teams de redação não é o modo Equipe. Entra ID para autenticação permanece
+uma investigação independente da exclusão de Azure como provider de IA.
+
+Trazer **BL-099** como trabalho novo do SaaS: bypass opcional e persistido
+do pré-processamento, habilitado por padrão, separado das conversões
+necessárias ao reconhecimento e preservando originais. Não implementar
+esse item no desktop por consequência desta escolha.
+
+S3 é preferência para arquivos. Validar conta, região, buckets, permissões,
+custos e a persistência concorrente de metadados/abas/grupos. Investigar
+Whisper no navegador antes de decidir inclusão/fallback e Entra ID no
+padrão Orquestra; mock só como possibilidade de desenvolvimento local.
+Cada pessoa deve acessar apenas seus próprios recursos no servidor.
+
+O STT Hub recebeu a documentação consolidada e fontes primárias de pesquisa
+documental. Há caminhos documentados para Whisper em WASM/WebGPU, mas nenhum
+teste de qualidade, hardware ou desempenho foi executado. Sem inferência,
+autenticação real, criação de infraestrutura ou scaffold nesta rodada.
+Conversa ao vivo, TTS e outros itens não citados continuam sem decisão no
+SaaS. O backlog desktop permanece independente; BL-098 segue abandonado.
 
 ## Direções ainda sem escopo
 
